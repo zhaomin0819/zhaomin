@@ -1,0 +1,436 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+/*nav导航条*/
+nav{
+	width: 100%;
+	height: 80px;
+	/*固定定位*/
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	background: white;
+	box-shadow: 0 0px 5px #bbb;
+}
+nav .content{
+	width: 1200px;
+	height: 80px;
+	/*background: yellow;*/
+	margin: 0 auto;
+}
+nav .content img{
+	float: left;
+	margin-top: 10px;
+}
+nav .content ul{
+	float: right;
+	width: 450PX;
+	height: 80PX;
+	/*background: pink;*/
+}
+nav .content ul li{
+	float: left;
+	line-height: 70px;
+	margin-right: 20px;
+	font-size: ;
+	font-family: arial;
+	color: #333;
+	/*background: red;*/
+	cursor: pointer;
+}
+
+
+/*header banner*/
+header{
+	width: 100%;
+	height: 700px;
+	/*background-color: blue;*/
+	background-image: url(../img/987.png) ;
+	/*背景图片不重复*/
+	background-repeat:  no-repeat;
+	/*背景图出现在整个色块的中间上面*/
+	background-position:  center;
+	/*调整背景图*/
+	background-size: 100%;
+	/*背景图固定不动*/
+	/*background-attachment: fixed;*/
+	/*文档流浮动都不太好让文字上下左右都动*/
+	position: relative;
+}
+/*header .mask{
+	/*遮罩*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*background: rgba(0,0,0,0.5);*/
+/*}*/*/
+header p{
+	width: 200px;
+	height: 200px;
+	/*background: white;*/
+	/*下面四行是处理文字的*/
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	/*下面六行代码,是让一个元素在父元素中居中*/
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+header img{
+ /*动画*/
+ width: 50px;
+ height: 40px;
+ position: absolute;
+ top:530px;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ margin:auto;
+ animation: move 1s infinite ;
+}
+@keyframes move{/*动画规则*/
+ 0%{margin-top: 20px;}
+ 50%{margin-top: 60px;}
+ 100%{margin-top: 20px;}
+}
+
+/*professional skills*/
+.professional{
+	width: 100%;
+	/*background: red;*/
+}
+.professional h2{
+	width: 100%;
+	height: 75px;
+	/*下面改变字体属性*/
+	color: #333;
+	/*居中*/text-align: center;
+	/*垂直居中行高*/line-height: 80px;
+	/*字体*/font-family: arial;
+}
+.professional .sanjiao{
+	/*三角*/
+	width: 0;
+	height: 0;
+	border-bottom: 25px solid black;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 0;
+	/*居中*/
+	margin: 0 auto;
+	/*向上移动*/
+	margin-top: -10px;
+}
+.professional .skill_box{
+	width: 100%;
+	/*加背景图片*/
+	background-image: url(../img/583ea0460d10d.png);
+	background-position:center ;
+	background-size:100% ;
+	/*background: blue;*/
+}
+.professional .skill_box ul{
+	/*四个技能是放到有内宽的盒子中*/
+	width: 1200px;
+	/*background: green;*/
+	/*整个内宽的盒子居中*/
+	margin: 0 auto;
+	/*特殊用法*/
+	/*加了这条属性,浮动的子元素可以撑开自己*/
+	overflow: hidden;
+}
+.professional .skill_box ul li{
+	width: 225px;
+	/*高度自己设置*/
+	height: 400px;
+	/*background: #123456;*/
+	float: left;
+	margin-right:100px ;
+}
+.professional .skill_box ul li .icon{
+	width: 225px;
+	height: 225px;
+	/*圆的*/border-radius: 50%;
+	/*圆的颜色有透明度*/
+	background: rgba(158,104,102,0.65);
+	/*缩放0.85倍;*/
+	transform: scale(0.85,0.85);
+	/*过渡*/
+	transition: background 0.5s,transform 0.5s;
+	position: relative;
+}
+.professional .skill_box ul li .icon img{
+	width: 100px;
+	position: absolute;
+	top: 60px;
+	left: 60px;
+	
+}
+.professional .skill_box ul li:hover .icon{
+	/*鼠标移入li后,背景色变深,整个变大*/
+	background: rgba(158,104,102,1);
+	transform: scale(1,1);
+}
+.professional .skill_box ul li h4{
+	text-align: center;
+	color: #bbb;
+	margin-top: 20px;
+	transition: color 0.5s;
+}
+.professional .skill_box ul li:hover h4{
+	color: #fff;
+}
+.professional .skill_box ul li p{
+	color: #bbb;
+	margin-top: 20px;
+	transition: color 0.5s;
+}
+.professional .skill_box ul li:hover p{
+	color: #fff;
+}
+
+
+/*design works*/
+.design_box{
+	width: 1200px;
+	height: 770px;
+	/*background: pink;*/
+	/*居中*/margin: 0 auto;
+	/*整个块儿向下移动*/
+	margin-top: 20px;
+}
+.design_box h2{
+	width: 100%;
+	height: 75px;
+	/*下面改变字体属性*/
+	color: #333;
+	/*居中*/text-align: center;
+	/*垂直居中行高*/line-height: 80px;
+	/*字体*/font-family: arial;
+}
+
+.design_box .tab{
+	width: 1070px;
+	height: 465px;
+	/*background: red;*/
+	margin: 10px auto 0;
+}
+.design_box .tab .anniu-box{
+	width: 335px;
+	height: 40px;
+	margin: 0 auto;
+}
+.design_box .tab .anniu-box .anniu{
+	/*按钮选项*/
+	width: 78px;
+	height: 38px;
+	border: 1px solid black;
+	/*background: green;*/
+	color: black;
+	text-align: center;
+	line-height: 36px;
+	font-size: 20px;
+	border-radius: 6px;
+	float:left;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.design_box .tab .anniu-box .anniu:nth-child(4){
+	margin-right: 0;
+}
+.design_box .tab .content-box{
+	width: 1070px;
+	height: 400px;
+	/*background: blue;*/
+	margin-top: 25px;
+}
+.design_box .tab .content-box ul{
+	width: 1070px;
+	height: 400px;
+/*	background: green;*/
+}
+.design_box .tab .content-box ul:nth-child(2){
+	display: none;
+}
+.design_box .tab .content-box ul:nth-child(3){
+	display: none;
+}
+.design_box .tab .content-box ul:nth-child(4){
+	display: none;
+}
+.design_box .tab .content-box ul li{
+	width: 260px;
+	height: 195px;
+	background: black;
+	float: left;
+	overflow: hidden;
+}
+.design_box .tab .content-box ul li img{
+	width: 260px;
+	height: 195px;
+}
+.design_box .tab .content-box ul li:nth-child(1){
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.design_box .tab .content-box ul li:nth-child(2){
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.design_box .tab .content-box ul li:nth-child(3){
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.design_box .tab .content-box ul li:nth-child(4){
+	margin-bottom: 10px;
+}
+.design_box .tab .content-box ul li:nth-child(5){
+	margin-right: 10px;
+}
+.design_box .tab .content-box ul li:nth-child(6){
+	margin-right: 10px;
+}
+.design_box .tab .content-box ul li:nth-child(7){
+	margin-right: 10px;
+}
+/*缩放*/
+.design_box .tab .content-box ul li img{
+	transition:transform 1s;
+}
+.design_box .tab .content-box ul li img:hover{
+	transform:scale(1.2)
+}
+
+
+
+
+
+
+/*software skill*/
+.software{
+	width: 100%;
+	height: 450px;
+	background: #555;
+	background-image:url(../img/500558672.jpg) ;
+}
+.software h2{
+	width: 100%;
+	height: 75px;
+	/*下面改变字体属性*/
+	color: white;
+	/*居中*/text-align: center;
+	/*垂直居中行高*/line-height: 180px;
+	/*字体*/font-family: arial;
+}
+.software ul{
+	width: 1200px;
+	height: 220px;
+	/*background: #abcdef;*/
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.software ul li{
+	height: 100%;
+	width: 140px;
+	margin-right: 72px;
+	/*background: #654321;*/
+	float: left;
+}
+.software ul li .rotate{
+	width: 140px;
+	height: 140px;
+	/*background: #654321;*/
+	transition: transform 0.5s;
+}
+.software ul li .rotate img{
+	width: 100%;
+	height: 100%;
+}
+.software ul li .rotate:hover{
+	transform: rotateY(360deg);
+}
+.software ul li h3{
+	width: 100%;
+	height: 30px;
+	line-height: 40px;
+	text-align: center;
+	color: #E05849;
+}
+/*last contac me*/
+footer{
+	width: 100%;
+	/*height: 450px;*/
+	padding-bottom: 80px;
+	background: #EAEAEA;
+	margin-top: 130px;
+	border-top: 1px solid #EAEAEA;
+}
+
+footer .self{
+	width: 100px;
+	height: 100px;
+	border: 3px solid #8D2212;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-top: -50px;
+	overflow: hidden;
+	background-image:url(../img/WechatIMG1.jpeg) ;
+	background-size:100% ;
+}
+footer .content{
+	font-size: 18px;
+	color: #999;
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+	line-height: 1.5em;
+}
+footer h3{
+	width: 100%;
+	text-align: center;
+	color: #8D2820;
+	margin-top: 30px;
+}
+footer ul{
+	width: 800px;
+	height: 180px;
+	margin: 0 auto;
+	margin-top: 20px;
+	/*background: black;*/
+}
+footer ul li{
+	height: 100%;
+	width: 200px;
+	float: left;
+	/*background: red;*/
+}
+footer ul li div{
+	width: 100px;
+	height: 100px;
+	background: #A7A7A7;
+	margin: 0 auto;
+	border-radius: 20px;
+	/*文字*/
+	text-align: center;
+	line-height: 90px;
+	color: white;
+}
+footer ul li p{
+	font-size: 15px;
+	color: #666;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center;
+}
